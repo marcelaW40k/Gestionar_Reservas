@@ -68,8 +68,8 @@ body {
     margin-top: 5px;
 }
 
-/* Botón de registro */
-.btn-registro {
+/* Botón de login */
+.btn-login {
     background: #522676;
     color: white;
     border: none;
@@ -86,14 +86,14 @@ body {
     min-width: 180px;
 }
 
-.btn-registro:hover {
+.btn-login:hover {
     background: #AE8D3E;
     color: white;
     border: 1px solid #AE8D3E;
 }
 
-/* Mensaje de éxito */
-.mensaje-exito {
+/* Mensaje de bienvenida */
+.mensaje-bienvenida {
     background: #D69E2E;
     color: #522676;
     text-align: center;
@@ -105,6 +105,20 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+/* Mensaje de error general */
+.mensaje-error {
+    background: #dc3545;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Enlace de registro */
 .registro-link {
     text-align: center;
     margin-top: 20px;

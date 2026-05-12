@@ -14,11 +14,17 @@
                     <li class="nav-item"><a href="/pages/aboutUs/aboutUs.html" class="nav-link">Acerca de nosotros</a></li>
                     <li class="nav-item"><a href="/pages/contact/contact.html" class="nav-link">Contactenos</a></li>
                     <li class="nav-item"><a href="/pages/admin/panelDeControl/panelControl.html" class="nav-link">Administrador</a></li>
-                    <li class="nav-item login">
-                        <button class="btn-acceder"><a href="/pages/registro/registro.html" class="nav-link enlace_link">
-                            <i class="fa-solid fa-user"></i>
+                    <li class="nav-item login" id="nav-login-item">
+                        <div id="user-info" style="display: none;">
+                            <span class="user-name" id="userName"></span>
+                            <button class="btn-cerrar-sesion" id="btnCerrarSesion">Cerrar sesión</button>
+                        </div>
+                        <div id="acceso-botones">
+                            <button class="btn-acceder"><a href="/pages/login/login.html" class="nav-link enlace_link">
+                                <i class="fa-solid fa-user"></i>
                                 Acceder
-                        </a></button>
+                            </a></button>
+                        </div>
                     </li>
                 </ul>
             </div>
