@@ -124,24 +124,33 @@ h1, h2, h3,h4,h5,h6 {
     color: var(--color-secundario)!important;
 }
 
-.btn-acceder{
-
-    width: 100%;
-    display: block;
-    font-size: 18px;
-    background: var(--color-secundario);
-    color: white;
-    border: none;
-    border-radius: 20px;
+.btn-iniciar-sesion {
+    background: transparent;
+    border: 1px solid var(--color-secondary);
+    border-radius: 25px;
     cursor: pointer;
+    font-family: var(--font-family-general);
+    font-size: 14px;
+    font-weight: 500;
     transition: 0.3s;
-    margin: 0 auto;
+    margin-left: 20px;
+    padding: 0;
 }
 
-.btn-acceder:hover {
-    background: var(--color-primario);
-    color: #fff;
-    border: 1px solid #f8f8f8;
+.btn-iniciar-sesion a {
+    display: block;
+    padding: 8px 20px;
+    color: var(--color-secondary);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-iniciar-sesion:hover {
+    background: var(--color-secondary);
+}
+
+.btn-iniciar-sesion:hover a {
+    color: white;
 }
 
 @media (max-width: 576px) {
