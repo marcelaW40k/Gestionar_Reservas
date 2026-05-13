@@ -33,16 +33,21 @@ document.addEventListener('DOMContentLoaded', function() {
         if (isValid) {
             const usuario = verificarCredenciales(email, password);
             
-        if (usuario) {
-            localStorage.setItem('usuarioLogueado', JSON.stringify({
-                email: usuario.email,
-                nombre: usuario.nombreCompleto,
-                rol: usuario.rol,
-                fechaLogin: new Date().toISOString()
-            }));
-            
-            window.parent.location.href = '/index.html';
-
+            if (usuario) {
+                localStorage.setItem('usuarioLogueado', JSON.stringify({
+                    email: usuario.email,
+                    nombre: usuario.nombreCompleto,
+                    rol: usuario.rol,
+                    fechaLogin: new Date().toISOString()
+                }));
+                
+                const mensajeBienvenida = document.getElementById('mensajeBienvenida');
+                mensajeBienvenida.textContent = `¡Bienvenido/a, ${usuario.nombreCompleto}!`;
+                mensajeBienvenida.style.display = 'block';
+                
+                setTimeout(() => {
+                    window.parent.location.href = '/index.html';
+                }, 2000);
             } else {
                 const mensajeError = document.getElementById('mensajeError');
                 mensajeError.textContent = '❌ Correo electrónico o contraseña incorrectos';
@@ -83,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function ocultarMensajes() {
         const mensajeBienvenida = document.getElementById('mensajeBienvenida');
         const mensajeError = document.getElementById('mensajeError');
-        mensajeBienvenida.style.display = 'none';
-        mensajeError.style.display = 'none';
+        if (mensajeBienvenida) mensajeBienvenida.style.display = 'none';
+        if (mensajeError) mensajeError.style.display = 'none';
     }
 });
