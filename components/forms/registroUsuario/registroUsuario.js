@@ -66,6 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 email: email,
                 telefono: telefono,
                 password: password,
+                rol: "usuario",
                 fechaRegistro: new Date().toISOString()
             };
             

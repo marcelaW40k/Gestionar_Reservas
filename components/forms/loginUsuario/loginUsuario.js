@@ -33,16 +33,16 @@ document.addEventListener('DOMContentLoaded', function() {
         if (isValid) {
             const usuario = verificarCredenciales(email, password);
             
-            if (usuario) {
-                // Guardar sesión (usuario logueado)
-                localStorage.setItem('usuarioLogueado', JSON.stringify({
-                    email: usuario.email,
-                    nombre: usuario.nombreCompleto,
-                    fechaLogin: new Date().toISOString()
-                }));
-                
-                // Redirigir al inicio
-                window.parent.location.href = '/index.html';
+        if (usuario) {
+            localStorage.setItem('usuarioLogueado', JSON.stringify({
+                email: usuario.email,
+                nombre: usuario.nombreCompleto,
+                rol: usuario.rol,
+                fechaLogin: new Date().toISOString()
+            }));
+            
+            window.parent.location.href = '/index.html';
+
             } else {
                 const mensajeError = document.getElementById('mensajeError');
                 mensajeError.textContent = '❌ Correo electrónico o contraseña incorrectos';

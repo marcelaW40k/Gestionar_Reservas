@@ -7,15 +7,21 @@ function actualizarNavbar() {
     const userInfo = document.getElementById('user-info');
     const accesoBotones = document.getElementById('acceso-botones');
     const userNameSpan = document.getElementById('userName');
+    const adminLink = document.getElementById('admin-link');
     
     if (usuarioLogueado) {
         const usuario = JSON.parse(usuarioLogueado);
         if (userNameSpan) userNameSpan.textContent = `Hola, ${usuario.nombre}`;
         if (userInfo) userInfo.style.display = 'block';
         if (accesoBotones) accesoBotones.style.display = 'none';
+        
+        if (adminLink) {
+            adminLink.style.display = usuario.rol === 'admin' ? 'block' : 'none';
+        }
     } else {
         if (userInfo) userInfo.style.display = 'none';
         if (accesoBotones) accesoBotones.style.display = 'block';
+        if (adminLink) adminLink.style.display = 'none';
     }
 }
 
