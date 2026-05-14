@@ -4,10 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
   <link rel="stylesheet" href="/components/footer/footer.css" />
@@ -23,14 +20,15 @@
   <header id="header" class="sticky-top"></header>
 
   <!-- ── PASO 1: SERVICIO SELECCIONADO ── -->
-  <section class="container-custom py-4" id="seccionServicio">
+  <section class="seccion-reserva py-4" id="seccionServicio">
     <h2 class="card-title text-center mb-2">Tu servicio</h2>
     <p class="text-center subtitle">Revisa el servicio que seleccionaste</p>
-    <div id="reservas_container"></div>
+    <div id="reservas_container">
+    </div>
   </section>
 
   <!-- ── PASO 2: SECCIÓN ESTILISTAS ── -->
-  <section class="container-custom py-5">
+  <section class="seccion-reserva py-5">
     <h2 class="card-title text-center mb-2">Nuestros Estilistas</h2>
     <p class="text-center subtitle">Elige a tu estilista y reserva tu cita</p>
 
@@ -47,7 +45,7 @@
   </section>
 
   <!-- ── PASO 3: SECCIÓN FECHA Y HORA (oculta hasta que se elija un estilista) ── -->
-  <section class="container-custom pb-5" id="seccionCalendario" style="display:none;">
+  <section class="seccion-reserva pb-5" id="seccionCalendario" style="display:none;">
 
     <div class="detalle-container">
       <h5 class="card-title mb-4" style="font-size:1.6rem;">Selecciona fecha y hora</h5>
@@ -79,12 +77,11 @@
         </div>
 
       </div>
-
+    
       <!-- ── PASO 4: CONFIRMACIÓN ── -->
       <div id="confirmacionServicioWrapper" class="confirmacion-wrapper" style="display:none; margin-top: 30px;">
         <div class="confirmacion-container">
           <div class="confirmacion-header">
-            <span class="paso-numero">04</span>
             <h3 class="paso-titulo">CONFIRMACIÓN</h3>
           </div>
 
