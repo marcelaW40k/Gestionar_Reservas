@@ -405,6 +405,7 @@
 /* ════════════════════════════════════════════
    RESPONSIVE
 ════════════════════════════════════════════ */
+
 @media (max-width: 576px) {
   .horas-grid {
     grid-template-columns: repeat(3, 1fr);
