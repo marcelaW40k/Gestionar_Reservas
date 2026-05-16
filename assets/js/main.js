@@ -101,6 +101,17 @@ fetch('components/review/review.html')
     .then(res => res.text())
     .then(html => {
         document.getElementById('review-placeholder').innerHTML = html;
+
+    // Carga el CSS 
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = '../../components/review/review.css';
+    document.head.appendChild(link);
+
+  
+    setTimeout(() => {
+        initialReview();
+    }, 100);
     })
     .catch(err => console.error('Error cargando los comentarios:', err));
 
@@ -111,3 +122,4 @@ fetch('components/footer/footer.html')
         document.getElementById('footer-placeholder').innerHTML = html;
     })
     .catch(err => console.error('Error cargando el footer:', err));
+
