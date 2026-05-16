@@ -25,5 +25,22 @@ h2 {
   padding-right: 4rem;
 }  
 
+.btn-principal {
+    background: #522676;
+    color: white;
+    border: 2px solid transparent;
+    padding: 12px 30px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
 
-
+.btn-principal:hover {
+    background: white;
+    color: #AE8D3E;
+    border: 2px solid #AE8D3E;
+    transform: scale(1.05);
+}
