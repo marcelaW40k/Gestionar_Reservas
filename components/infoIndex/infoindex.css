@@ -1,71 +1,189 @@
-:root {
+
+:root{
     --color-primary: #522676;
     --color-secondary: #AE8D3E;
     --font-family-title: 'Playfair Display', serif;
     --font-family-general: 'Montserrat', sans-serif;
+    --color-text: #2B2B2B;
+    --color-text-light: #666666;
+    --color-bg: #FCFAF8;
+    --color-white: #FFFFFF;
+    --shadow-soft:
+    0 15px 40px rgba(82, 38, 118, 0.08);
+
 }
 
-.text-content {
-    border: solid var(--color-secondary) 2px;
-    background-color:#f0e1c0;
+.brand-values{
+    padding: 90px 64px;
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 70px;
+    align-items: center;
+    background:
+    linear-gradient(
+        180deg,
+        #ffffff,
+        #faf7fc
+    );
+}
+.values-intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    max-width: 520px;
+    margin: auto 0;
 }
 
-.card-title {
-    color: var(--color-primary);
+.values-tag{
+    color: #d4a54b;
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.values-intro h2{
     font-family: var(--font-family-title);
-    font-size: 3rem;
+    font-size: clamp(2.8rem, 5vw, 4.8rem);
+    line-height: 1.1;
+    color: var(--color-text);
+    margin-bottom: 1.8rem;
+    font-weight: 700;
 }
 
-.card-text{
+.values-intro h2 span{
+    color: var(--color-primary);
+    font-style: italic;
+}
+
+.values-intro p{
     font-family: var(--font-family-general);
+    color: var(--color-text-light);
+    line-height: 2;
     font-size: 1rem;
-    font-weight: bold;
+    max-width: 480px;
 }
 
-.container-custom {
-  width: 100%;
-  max-width: 100%; 
-  padding-left: 20px;
-  padding-right: 20px;
+.values-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 45px;
+}
+.value-item{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding-bottom: 40px;
 }
 
-.linea-separadora {
-  width: 100px;
-  height: 2px;
-  margin: 15px auto 20px;
-  border-radius: 10px;
-  background: var(--color-secondary);
+.value-line{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background:
+    rgba(82, 38, 118, .12);
 }
 
-.subtitulo{
+.value-text{
+    flex: 1;
+}
+
+.value-count{
     font-family: var(--font-family-general);
-    font-size: 1rem;
-    color: #666;
-    max-width: 600px;
-    margin: 0 auto;
-    padding-bottom: 20px;
-    text-align: center;
+    font-size: .85rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    letter-spacing: 3px;
 }
 
+.value-text h3{
+    font-family: var(--font-family-title);
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin:
+    .7rem 0 1rem;
+}
 
+.value-text p{
+    font-family: var(--font-family-general);
+    color: var(--color-text-light);
+    line-height: 1.9;
+    max-width: 420px;
+    font-size: .96rem;
+}
 
-/* ==== APARTADO RESPONSIVE ==== */
-@media(min-width:768px){
-    .card-title{
-        font-size: 2.5rem;
+.value-image{
+    width: 300px;
+    height: 180px;
+    border-radius: 28px;
+    overflow: hidden;
+    flex-shrink: 0;
+    position: relative;
+    box-shadow: var(--shadow-soft);
+}
+
+.value-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s ease;
+}
+
+.value-item:hover img{
+    transform: scale(1.08);
+}
+
+.value-image::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+    linear-gradient(
+        180deg,
+        rgba(82,38,118,.04),
+        rgba(82,38,118,.12)
+    );
+}
+
+@media(max-width: 992px){
+    .brand-values{
+        grid-template-columns: 1fr;
+        gap: 60px;
     }
-    .profesionalismo{
-        font-size: 2.2rem;
+    .values-intro{
+        max-width: 100%;
     }
 }
 
-@media screen and (max-width: 550px) {
-    .card-title{
-        font-size: 1.5rem;
+@media(max-width: 768px){
+    .value-item{
+        flex-direction: column;
+        align-items: flex-start;
     }
-
-    .card-mobile {
-        font-size: 1.1rem;
+    .value-image{
+        width: 100%;
+        height: 260px;
     }
+}
 
+@media(max-width:576px){
+    .brand-values{
+        padding: 90px 20px;
+    }
+    .values-intro h2{
+        font-size: 2.3rem;
+    }
+    .value-text h3{
+        font-size: 1.7rem;
+    }
+    .value-image{
+        height: 220px;
+        border-radius: 24px;
+    }
 }

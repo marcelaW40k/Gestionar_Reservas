@@ -23,6 +23,7 @@
       rel="stylesheet"
       href="components/servicios Destacados/serviciosDestacados.css"
     />
+    <link rel="stylesheet" href="components/review/review.css">
     <link rel="stylesheet" href="components/infoIndex/infoIndex.css" />
     <link rel="stylesheet" href="components/bannerInicio/bannerInicio.css" />
     <link rel="stylesheet" href="./components/navbar/navbar.css" />
@@ -30,45 +31,12 @@
 
     <title>Inicio</title>
   </head>
-
   <body>
     <header id="header" class="sticky-top"></header>
     <div id="bannerInicio-placeholder"></div>
     <div id="infoIndex-placeholder"></div>  
     <div id="serviceDes-placeholder"></div>
-    <section class="container">
-      <div
-        id="carouselResenas"
-        class="carousel slide"
-        data-bs-ride="carousel"
-        data-bs-interval="2500"
-      >
-        <h2 class="card-title text-center mt-3 mb-3">Reseñas</h2>
-
-        <div class="carousel-inner content-carousel">
-          <div class="carousel-item active">
-            <img
-              src="https://res.cloudinary.com/diq2bkb49/image/upload/v1776783907/rese%C3%B1a_5_ib29gl.png"
-              class="d-block w-100"
-            />
-          </div>
-
-          <div class="carousel-item">
-            <img
-              src="https://res.cloudinary.com/diq2bkb49/image/upload/v1776783907/rese%C3%B1a_2_rshpsx.png"
-              class="d-block w-100"
-            />
-          </div>
-
-          <div class="carousel-item">
-            <img
-              src="https://res.cloudinary.com/diq2bkb49/image/upload/v1776783907/rese%C3%B1a_1_o2ynzv.png"
-              class="d-block w-100"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
+    <div id="review-placeholder"></div>
     <div id="footer-placeholder"></div>
 
     <script
@@ -80,6 +48,7 @@
       src="https://kit.fontawesome.com/da49b4fb7a.js"
       crossorigin="anonymous"
     ></script>
+    <script src="components/review/review.js" defer></script>
     <script src="assets/js/main.js"></script>
   </body>
 </html>
