@@ -45,9 +45,6 @@ if (logoutBtn) {
   });
 }
 
-
-
-
   function loadPage(page) {
     fetch(page)
       .then(res => res.text())

@@ -87,7 +87,7 @@ function confirmarReserva() {
   // Limpia el servicio seleccionado
   localStorage.removeItem('servicioSeleccionado');
 
- // Mostrar modal con los mismos datos que la alerta original
+   // Mostrar modal con los mismos datos que la alerta original
 const mensaje = `
   <strong style="color:#28a745;">RESERVA CONFIRMADA</strong><br><br>
   ${nuevaReserva.servicio.nombre}<br>
@@ -98,7 +98,7 @@ const mensaje = `
 
 document.getElementById("mensajeConfirmacion").innerHTML = mensaje;
 
-// Mostrar el modal sin alterar el flujo
+// Mostrar el modal confirmado
 const modalConfirmacion = new bootstrap.Modal(document.getElementById("modalConfirmacionReserva"));
 modalConfirmacion.show();
 
@@ -110,7 +110,6 @@ document.getElementById("modalConfirmacionReserva")
       btnConfirmar.style.display = "none"; // 
     }
   });
-
 
   return nuevaReserva;
 }
