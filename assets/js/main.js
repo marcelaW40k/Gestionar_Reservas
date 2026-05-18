@@ -84,9 +84,9 @@ fetch('/components/navbar/navbar.html')
             if(rutaEnlace == rutaActual){
                 enlace.classList.add('active');
                 console.log("Agregando clase activo")
-            }else {
-                enlace.classList.remove('active');
-            }
+             }else {
+                 enlace.classList.remove('active');
+             }
 
         });
     })
