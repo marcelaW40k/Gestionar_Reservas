@@ -46,7 +46,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 mensajeBienvenida.style.display = 'block';
                 
                 setTimeout(() => {
-                    window.parent.location.href = '/index.html';
+                    if (usuario.rol === 'admin') {
+                        window.parent.location.href = '/pages/admin/panelDeControl/panelControl.html';
+                    } else {
+                        window.parent.location.href = '/index.html';
+                    }
                 }, 2000);
             } else {
                 const mensajeError = document.getElementById('mensajeError');
