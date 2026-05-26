@@ -8,7 +8,7 @@ export function renderizarTablaReservas() {
     tbody.innerHTML = "";
 
     if (reservas.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="7" class="text-center">No hay reservas registradas</td></tr>`;
+        tbody.innerHTML = `<tr><td colspan="8" class="text-center">No hay reservas registradas</td></tr>`;
         return;
     }
 
@@ -16,6 +16,7 @@ export function renderizarTablaReservas() {
         const fila = `
             <tr>
                 <td>#ID-${String(reserva.id).padStart(2, '0')}</td>
+                <td>${reserva.cliente ?? "—"}</td>
                 <td>${reserva.profesional?.nombre ?? "—"}</td>
                 <td>${reserva.servicio?.nombre ?? "—"}</td>
                 <td>${reserva.fecha ?? "—"}</td>

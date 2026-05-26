@@ -64,8 +64,10 @@ function actualizarFechaHora(fecha, hora) {
 
 function confirmarReserva() {
   const servicio = JSON.parse(localStorage.getItem('servicioSeleccionado'));
+  const usuarioLogueado = JSON.parse(localStorage.getItem('usuarioLogueado'));
 
   const nuevaReserva = {
+    cliente: usuarioLogueado?.nombre ?? 'Invitado',
     servicio: {
       nombre: servicio?.nombre?.toUpperCase() || reservaActual.servicio.nombre,
       precio: servicio?.precio || reservaActual.servicio.precio
@@ -102,13 +104,10 @@ document.getElementById("mensajeConfirmacion").innerHTML = mensaje;
 const modalConfirmacion = new bootstrap.Modal(document.getElementById("modalConfirmacionReserva"));
 modalConfirmacion.show();
 
-// Cuando se cierre el modal desaparece el boton 
+// Cuando se cierre el modal, redirige a Acerca de Nosotros
 document.getElementById("modalConfirmacionReserva")
   .addEventListener("hidden.bs.modal", () => {
-    const btnConfirmar = document.getElementById("btnConfirmarReserva");
-    if (btnConfirmar) {
-      btnConfirmar.style.display = "none"; // 
-    }
+    window.location.href = '/pages/aboutUs/aboutUs.html';
   });
 
   return nuevaReserva;
