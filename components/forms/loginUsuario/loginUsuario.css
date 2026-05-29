@@ -1,0 +1,140 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #f5f5f5;
+}
+
+/* Contenedor principal del formulario */
+.form-container {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Título del formulario */
+.titulo-form {
+    font-family: 'Playfair Display', serif;
+    color: #522676;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+/* Cada grupo de campo */
+.input-group {
+    position: relative;
+    margin-bottom: 35px;
+}
+
+/* Estilos base para inputs */
+.input-group input {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #D69E2E;
+    outline: none;
+    background: transparent;
+    padding: 8px 0;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Efecto al hacer focus */
+.input-group input:focus {
+    border-bottom: 2px solid #522676;
+}
+
+/* Etiquetas flotantes */
+.input-group label {
+    position: absolute;
+    left: 0;
+    top: 8px;
+    color: #666;
+    font-size: 14px;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+/* Animación de etiquetas */
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+    top: -12px;
+    font-size: 12px;
+    color: #522676;
+}
+
+/* Mensajes de error */
+.error {
+    display: block;
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Botón de login */
+.btn-login {
+    background: #522676;
+    color: white;
+    border: none;
+    padding: 10px 35px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    min-width: 180px;
+}
+
+.btn-login:hover {
+    background: #AE8D3E;
+    color: white;
+    border: 1px solid #AE8D3E;
+}
+
+/* Mensaje de bienvenida */
+.mensaje-bienvenida {
+    background: #D69E2E;
+    color: #522676;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Mensaje de error general */
+.mensaje-error {
+    background: #dc3545;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Enlace de registro */
+.registro-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    color: #666;
+}
+
+.registro-link a {
+    color: #522676;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.registro-link a:hover {
+    color: #AE8D3E;
+    text-decoration: underline;
+}

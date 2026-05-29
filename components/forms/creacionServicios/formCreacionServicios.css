@@ -1,0 +1,144 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #f5f5f5;
+}
+
+/* Contenedor principal del formulario */
+.form-container {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Título del formulario */
+.titulo-form {
+    font-family: 'Playfair Display', serif;
+    color: #522676;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Cada grupo de campo */
+.input-group {
+    position: relative;
+    margin-bottom: 35px;
+}
+.status{
+    margin-bottom: 15px;
+}
+/* Estilos base para inputs y selects */
+.input-group input
+{
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #D69E2E;
+    outline: none;
+    background: transparent;
+    padding: 8px 0;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+/* Efecto al hacer focus */
+.input-group input:focus{
+    border-bottom: 2px solid #522676;
+}
+
+/* Etiquetas flotantes */
+.input-group label {
+    position: absolute;
+    left: 0;
+    top: 8px;
+    color: #666;
+    font-size: 14px;
+    transition: 0.3s;
+    pointer-events: none;
+}
+.status label{
+    color: #666;
+    font-size: 14px;
+}
+.contenedor_subir_imagen{
+    margin-bottom: 20px;
+}
+.contenedor_subir_imagen label{
+    color: #666;
+    display: block;
+}
+.caja_subir{
+  border: 2px dashed #999;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: #f9f9f9;
+}
+#preview{
+    max-width: 200px; 
+    display: none;
+}
+/* Animación de etiquetas generales */
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+    top: -12px;
+    font-size: 12px;
+    color: #522676;
+}
+
+/* Mensajes de error */
+.error {
+    display: block;
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Botón de envío */
+.btn-enviar {
+    width: 100%;
+    background: #522676;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+.btn-enviar:hover {
+    background: white;
+    color: #AE8D3E;
+    border: 1px solid #AE8D3E;
+}
+
+/* Mensaje de éxito
+.mensaje-exito {
+    background: #D69E2E;
+    color: #522676;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}*/
+
+/* Mensaje de enviando */
+/*
+.mensaje-enviando {
+    background: #522676;
+    color: #D69E2E;
+    text-align: center;
+    padding: 12px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+} */

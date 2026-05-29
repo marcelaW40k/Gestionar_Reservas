@@ -1,0 +1,367 @@
+/* ============================================
+   VARIABLES GLOBALES
+============================================ */
+:root{
+    --color-primary: #522676;
+    --color-secondary: #AE8D3E;
+    --font-family-title: 'Playfair Display', serif;
+    --font-family-general: 'Montserrat', sans-serif;
+}
+
+/* ============================================
+   ESTILOS BASE
+============================================ */
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* ============================================
+   HEADER Y NAVBAR PRINCIPAL
+============================================ */
+#header{
+    width: 100%;
+    background-color: var(--color-primary);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar{
+    height: 80px;
+    align-items: center;
+    padding: 0;
+}
+
+.container-fluid{
+    height: 100%;
+    flex-wrap: nowrap;
+    align-items: stretch;
+}
+
+/* ============================================
+   LOGO
+============================================ */
+.div_logo{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.div_logo h1{
+    color: #fff;
+}
+
+.navbar-brand{
+    display: flex;
+    height: 100%;
+    padding: 0;
+}
+
+.div_logo a img{
+    height: 100%;
+    display: block;
+}
+
+/* ============================================
+   MENÚ DE NAVEGACIÓN
+============================================ */
+.navbar-collapse{
+    align-items: stretch;
+    height: auto;
+}
+
+.navbar-nav{
+    margin-left: auto;
+    margin-right: 0 !important;
+    align-items: center;
+    background-color: var(--color-primary);
+}
+
+.nav-item{
+    height: 100%;
+}
+
+.nav-link {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+    height: 100%;
+    font-size: 20px;
+}
+
+.nav-link:hover, .nav-link:focus{
+    color: var(--color-secondary);
+}
+.nav-link.active{
+    border-bottom: 2px solid var(--color-secondary);
+}
+/* ============================================
+   BOTÓN DE ACCESO (INICIAR SESIÓN)
+============================================ */
+.login{
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+    margin-right: 40px;
+}
+
+.enlace_link{
+    gap: 10px;
+}
+
+.btn-iniciar-sesion {
+    background: transparent;
+    border: 1px solid var(--color-secondary);
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: var(--font-family-general);
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s;
+    margin-left: 20px;
+}
+
+.btn-iniciar-sesion a {
+    display: block;
+    padding: 8px 16px;
+    color: var(--color-secondary);
+    text-decoration: none;
+}
+
+.btn-iniciar-sesion a i {
+    font-size: 16px;
+    color: var(--color-secondary);
+    margin-right: 10px;
+}
+
+.btn-iniciar-sesion:hover {
+    background: var(--color-secondary);
+}
+
+.btn-iniciar-sesion:hover a {
+    color: white;
+}
+
+.btn-iniciar-sesion:hover a i {
+    color: white;
+}
+
+/* ============================================
+   ICONO DE USUARIO
+============================================ */
+.fa-user{
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+/* ============================================
+   MENÚ DESPLEGABLE (DROPDOWN)
+============================================ */
+.dropdown-menu{
+    background-color: var(--color-primary);
+    --bs-dropdown-spacer: 0;
+    min-width: 100%;
+    border-radius: 0;
+    border: none;
+    transition: all 0.3s ease;
+    display: block;
+    padding-top: 0;
+    padding-bottom: 0;
+    width: max-content;
+    opacity: 0;
+    transform: translateY(10px);
+    visibility: hidden;
+}
+
+.dropdown-item{
+    color: #fff;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+} 
+
+.dropdown-item:focus, .dropdown-item:hover{
+    background-color: transparent;
+    color: var(--color-secondary);
+}
+
+.enlace_login{
+    margin-left: 100px;
+}
+
+/* ============================================
+   BOTÓN DE TOGGLE PARA MÓVIL
+============================================ */
+.navbar-toggler {
+    border-color: white;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+.navbar-nav .nav-link.active, .nav-link.show{
+    color: var(--color-secondary) !important;
+}
+
+/* ============================================
+   SESIÓN DE USUARIO LOGUEADO
+============================================ */
+#user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 20px;
+}
+
+.user-name {
+    color: var(--color-secondary);
+    font-weight: 500;
+    font-size: 20px;
+}
+
+/* ============================================
+   BOTÓN DE CERRAR SESIÓN
+============================================ */
+.btn-cerrar-sesion {
+    background: transparent;
+    border: 1px solid var(--color-secondary);
+    color: var(--color-secondary);
+    padding: 8px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: var(--font-family-general);
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+    margin-left: 20px;
+}
+
+.btn-cerrar-sesion:hover {
+    background: var(--color-secondary);
+    color: white;
+}
+
+/* ============================================
+   MEDIA QUERIES - RESPONSIVE
+============================================ */
+@media (max-width: 576px) {
+    .navbar-toggler{
+        margin-right: 15px;
+    }
+    .navbar {
+        height: auto;
+    }
+    .navbar-nav {
+        height: auto;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+    .div_logo a img{
+        height: 60px;
+        padding: 10px;
+    }
+    .dropdown-item:hover, .dropdown-item:focus {
+        color: var(--color-secondary);
+        background-color: transparent !important;
+    }
+    .dropdown-item:active {
+        color: var(--color-secondary);
+        background-color: transparent;
+    }
+    .nav-item{
+        width: 100%;
+    }
+    .nav-link {
+        width: 100%;
+        padding: 10px;
+    }
+    .dropdown-menu {
+        opacity: 1;
+        transform: none;
+        visibility: visible;
+        display: none;
+        margin-left: 10px;
+    }
+    .dropdown-menu.show {
+        display: block;
+        padding-left: 15px;
+        background-color: rgba(255,255,255,0.05);
+    }
+    .navbar-collapse{
+        height: auto;
+    }
+    .dropdown-item {
+        padding-left: 0;
+    }
+    .login{
+        display: flex;
+        align-items: center;
+        margin-left: 0;
+    }
+    .enlace_link{
+        gap: 10px;
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar-toggler{
+        margin-right: 15px;
+    }
+    .navbar {
+        height: auto;
+    }
+    .container-fluid{
+        padding: 0;
+    }
+    .navbar-collapse{
+        height: auto;
+    }
+    .navbar-nav{
+        height: auto;
+        align-items: center;
+    }
+    .div_logo a img{
+        height: 60px;
+        padding: 10px;
+    }
+    .login{
+        margin: 0;
+    }
+    .nav-link{
+        justify-content: center;
+    }
+    .dropdown-menu {
+        opacity: 1;
+        transform: none;
+        visibility: visible;
+        display: none;
+    }
+    .dropdown-menu.show {
+        display: block;
+        padding-left: 0;
+        background-color: rgba(255,255,255,0.05);
+    }
+    .dropdown-item{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media(max-width:1024px){
+    .nav-link{
+        font-size: 1.125rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .div_logo{
+        padding: 20px;
+    }
+}

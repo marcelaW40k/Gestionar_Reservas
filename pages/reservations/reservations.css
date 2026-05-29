@@ -1,0 +1,466 @@
+/* ════════════════════════════════════════════
+  VARIABLES GLOBALES
+════════════════════════════════════════════ */
+:root {
+  --color-primary: #522676;
+  --color-secondary: #ae8d3e;
+  --font-family-title: "Playfair Display", serif;
+  --font-family-general: "Montserrat", sans-serif;
+}
+
+/* ════════════════════════════════════════════
+  CONTENEDOR UNIFICADO DE SECCIONES
+════════════════════════════════════════════ */
+.seccion-reserva {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Etiqueta de número de paso */
+.step-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.step-label .step-num {
+  font-family: var(--font-family-title);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-secondary);
+  line-height: 1;
+}
+
+.step-label .step-titulo {
+  font-family: var(--font-family-general);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #888;
+}
+
+
+.card-title {
+  color: var(--color-primary);
+  font-family: var(--font-family-title);
+  font-size: 3rem;
+}
+
+.text-purple {
+  color: var(--color-primary);
+  font-family: var(--font-family-title);
+  font-size: 18px;
+}
+
+.subtitle {
+  font-family: var(--font-family-general);
+  font-size: 1rem;
+  color: #666;
+}
+
+/* ════════════════════════════════════════════
+   PASO 1 — SERVICIO SELECCIONADO
+════════════════════════════════════════════ */
+#reservas_container {
+  width: 100%;
+}
+
+.contenido_reserva {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 28px;
+  align-items: center;
+  background: #fff;
+  border: 1.5px solid var(--color-secondary);
+  border-radius: 16px 16px 0 0;
+  padding: 28px 32px;
+  margin-bottom: 0;
+  box-shadow: 0 0 0 4px rgba(174, 141, 62, 0.08);
+}
+
+.contenido_reserva .texto {
+  flex: 1;
+}
+
+.contenedor_precio {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-bottom: 24px;
+}
+
+.contenedor_precio h1 {
+  font-family: var(--font-family-title);
+  font-size: 1.8rem;
+  color: var(--color-primary) !important;
+  margin: 0 0 8px;
+  line-height: 1.2;
+}
+
+.contenido_reserva .texto p {
+  font-family: var(--font-family-general);
+  font-size: 1rem;
+  color: #666;
+  line-height: 4;
+  margin: 0;
+  padding: 10px 14px;
+  background: rgba(174, 141, 62, 0.06);
+  border-left: 3px solid var(--color-secondary);
+  border-radius: 0 8px 8px 0;
+}
+
+.contenedor_imagen {
+  flex-shrink: 0;
+  flex-basis: auto;
+  width: 200px;
+}
+
+.contenedor_imagen img {
+  display: block;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border: 2px solid var(--color-secondary);
+  border-radius: 12px;
+}
+
+.contenedor_precio {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 1140px;
+  margin: 0 auto 24px;
+  padding: 14px 32px;
+  border: 1.5px solid var(--color-secondary);
+  border-top: none;
+  border-radius: 0 0 16px 16px;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(174, 141, 62, 0.08);
+}
+
+.contenedor_precio h1:first-child {
+  font-family: var(--font-family-general);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #888;
+  margin: 0;
+  flex: 1;
+}
+
+.contenedor_precio .precio {
+  font-family: var(--font-family-title);
+  font-size: 2rem;
+  color: var(--color-secondary);
+  margin: 0;
+}
+
+.texto-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.texto-header h1 {
+  margin: 0;
+}
+
+.btn-cambiar-servicio {
+  font-family: var(--font-family-general);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  border-bottom: 1.5px solid var(--color-primary);
+  padding-bottom: 2px;
+  margin-top: 6px;
+  transition: opacity 0.2s;
+}
+
+.btn-cambiar-servicio:hover {
+  opacity: 0.6;
+}
+
+/* ════════════════════════════════════════════
+   PASO 2 — CARDS DE ESTILISTAS
+════════════════════════════════════════════ */
+.card-estilista {
+  cursor: pointer;
+  transition: transform 0.3s;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 2px solid var(--color-secondary);
+}
+
+.card-estilista:hover {
+  transform: scale(1.05);
+}
+
+.card-estilista img {
+  height: 220px;
+  object-fit: cover;
+}
+
+.card-body h5 {
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+/* ════════════════════════════════════════════
+   PASO 3 — CONTENEDOR DE DETALLE (fecha/hora)
+════════════════════════════════════════════ */
+.detalle-container {
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+/* ════════════════════════════════════════════
+   PASO 3 — CALENDARIO
+════════════════════════════════════════════ */
+.calendario-wrapper {
+  background: #faf8fc;
+  border: 1px solid rgba(82, 38, 118, 0.15);
+  border-radius: 16px;
+  max-width: 100%;
+}
+
+.cal-month-label {
+  font-family: var(--font-family-title);
+  font-size: 15px;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.btn-cal-nav {
+  background: none;
+  border: 1px solid rgba(82, 38, 118, 0.2);
+  border-radius: 8px;
+  width: 28px;
+  height: 28px;
+  font-size: 16px;
+  color: var(--color-primary);
+  cursor: pointer;
+  line-height: 1;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.btn-cal-nav:hover {
+  background: rgba(82, 38, 118, 0.08);
+  border-color: var(--color-primary);
+}
+
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  font-family: var(--font-family-general);
+}
+
+.cal-nombre-dia {
+  font-size: 10px;
+  text-align: center;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 4px 0 8px;
+}
+
+/* Celda de día base: por defecto deshabilitada */
+.cal-dia {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-family: var(--font-family-general);
+  border-radius: 8px;
+  color: #ccc;
+  cursor: default;
+  border: 1px solid transparent;
+  position: relative;
+  transition: all 0.15s;
+}
+
+.cal-dia.disponible {
+  color: #333;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Punto indicador dorado bajo el número del día disponible */
+.cal-dia.disponible::after {
+  content: '';
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--color-secondary);
+}
+
+.cal-dia.disponible:hover {
+  background: rgba(174, 141, 62, 0.12);
+  border-color: var(--color-secondary);
+}
+
+.cal-dia.seleccionado {
+  background: var(--color-primary) !important;
+  color: white !important;
+  border-color: var(--color-primary) !important;
+}
+
+.cal-dia.seleccionado::after {
+  display: none;
+}
+
+/* ════════════════════════════════════════════
+   PASO 3 — HORAS DISPONIBLES
+════════════════════════════════════════════ */
+.horas-wrapper {
+  background: #faf8fc;
+  border: 1px solid rgba(82, 38, 118, 0.15);
+  border-radius: 16px;
+  min-height: 200px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  text-align: center;
+}
+
+.horas-fecha-label {
+  font-family: var(--font-family-title);
+  font-size: 1.3rem;
+  color: var(--color-primary);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.horas-wrapper p.text-muted {
+  font-family: var(--font-family-general);
+  font-size: 1rem;
+  color: #999;
+  max-width: 220px;
+  line-height: 1.6;
+}
+
+.horas-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+#horasGrid p.text-muted {
+  grid-column: 1 / -1;
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  font-size: 1rem;
+  color: #999;
+  line-height: 1.6;
+}
+
+.btn-hora {
+  background: white;
+  border: 1px solid rgba(174, 141, 62, 0.4);
+  border-radius: 10px;
+  padding: 10px 8px;
+  font-family: var(--font-family-general);
+  font-size: 13px;
+  font-weight: 500;
+  color: #444;
+  cursor: pointer;
+  transition: all 0.15s;
+  text-align: center;
+}
+
+.btn-hora:hover {
+  border-color: var(--color-secondary);
+  color: var(--color-secondary);
+  background: rgba(174, 141, 62, 0.08);
+}
+
+.btn-hora.seleccionado {
+  background: var(--color-secondary);
+  border-color: var(--color-secondary);
+  color: white;
+  font-weight: 600;
+}
+
+.contenedor_total {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+  max-width: 1140px;
+  margin: 0 auto 24px;
+  padding: 16px 32px;
+  border: 1.5px solid var(--color-secondary);
+  border-top: 1px solid rgba(174, 141, 62, 0.25);
+  border-radius: 0 0 16px 16px;
+  background: rgba(174, 141, 62, 0.06);
+  box-shadow: 0 0 0 4px rgba(174, 141, 62, 0.08);
+}
+
+.total-label {
+  font-family: var(--font-family-general);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #888;
+}
+
+.total-valor {
+  font-family: var(--font-family-title);
+  font-size: 2rem;
+  color: var(--color-secondary);
+}
+
+/* ════════════════════════════════════════════
+   RESPONSIVE
+════════════════════════════════════════════ */
+
+@media (max-width: 576px) {
+  .horas-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card-title {
+    font-size: 2rem;
+  }
+
+  .contenido_reserva {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .contenedor_imagen,
+  .contenedor_imagen img {
+    width: 100%;
+    height: 200px;
+  }
+
+  .contenedor_precio {
+    padding: 14px 20px;
+    border-radius: 0 0 16px 16px;
+  }
+}

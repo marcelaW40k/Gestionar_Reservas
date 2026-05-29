@@ -1,0 +1,226 @@
+/* ===== ESTILOS LISTA DE RESERVAS ===== */
+
+.admin-lista-reservas-main {
+    background-color: #f5f7fa;
+    padding: 50px 20px 70px;
+    min-height: calc(100vh - 160px);
+}
+
+/* Panel contenedor con borde dorado redondeado */
+.admin-lista-reservas-panel {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 20px;
+    border: 1px solid var(--color-secondary, #AE8D3E);
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.seccion-lista-reservas {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cabecera */
+.cabecera-lista-reservas {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 1.5rem;
+}
+
+.cabecera-lista-reservas h2 {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    color: var(--color-primary, #522676);
+    font-family: var(--font-family-title, 'Playfair Display', serif);
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.linea-cabecera {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--color-primary, #522676) 0%, rgba(82, 38, 118, 0.1) 100%);
+}
+
+.contenedor-tabla-reservas {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* ===== TABLA ESTILO SERVICIOS DESTACADOS ===== */
+.tabla-lista-reservas {
+    width: 100%;
+    /* min-width: 640px; */
+    margin-bottom: 0;
+    border-collapse: collapse;
+}
+
+.tabla-lista-reservas th,
+.tabla-lista-reservas td {
+    border: none;
+    padding: 0.8rem 0.6rem;
+    text-align: left;
+}
+
+/* Encabezado */
+.tabla-lista-reservas thead th {
+    background-color: var(--color-primary, #522676);
+    color: #ffffff;
+    font-family: var(--font-family-general, 'Montserrat', sans-serif);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+}
+
+/* Filas intercaladas - Color lila suave como la gráfica */
+.tabla-lista-reservas.table-striped > tbody > tr:nth-of-type(odd) > * {
+    background-color: #f3eef8;
+}
+
+.tabla-lista-reservas.table-striped > tbody > tr:nth-of-type(even) > * {
+    background-color: #ffffff;
+}
+
+/* Efecto hover */
+.tabla-lista-reservas > tbody > tr:hover > * {
+    background-color: #e8ddf2 !important;
+    transition: background-color 0.2s ease;
+}
+
+/* ID en negrita y morado */
+.tabla-lista-reservas tbody td:first-child {
+    font-weight: 700;
+    color: var(--color-primary, #522676);
+}
+
+/* Badges de estado */
+.badge-estado {
+    display: inline-block;
+    padding: 0.25rem 0.7rem;
+    border-radius: 20px;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+.badge-estado.confirmada {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #a5d6a7;
+}
+
+.badge-estado.pendiente {
+    background-color: #fff3e0;
+    color: #ef6c00;
+    border: 1px solid #ffcc80;
+}
+
+.badge-estado.cancelada {
+    background-color: #ffebee;
+    color: #c62828;
+    border: 1px solid #ef9a9a;
+}
+
+/* Botones de acción */
+.celda-acciones {
+    white-space: nowrap;
+}
+
+.btn-accion {
+    width: 28px;
+    height: 28px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #666666;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin: 0 1px;
+}
+
+.btn-accion i {
+    font-size: 0.8rem;
+    pointer-events: none;
+}
+
+.btn-accion:hover {
+    background-color: var(--color-primary, #522676);
+    border-color: var(--color-primary, #522676);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .admin-lista-reservas-main {
+        padding: 30px 15px 50px;
+    }
+
+    .admin-lista-reservas-panel {
+        padding: 20px 10px;
+        width: 100%;
+    }
+
+    .cabecera-lista-reservas h2 {
+        font-size: 1rem;
+        padding-left: 10px;
+    }
+
+    .tabla-lista-reservas th,
+    .tabla-lista-reservas td {
+        padding: 0.6rem 0.45rem;
+        font-size: 0.72rem;
+    }
+
+    .tabla-lista-reservas thead th {
+        font-size: 0.65rem;
+    }
+
+    .btn-accion {
+        width: 26px;
+        height: 26px;
+    }
+
+    .btn-accion i {
+        font-size: 0.7rem;
+    }
+
+    .badge-estado {
+        padding: 0.2rem 0.5rem;
+        font-size: 0.58rem;
+    }
+   
+}
+@media(max-width:480px){
+    .admin-lista-reservas-panel {
+        padding: 0;
+        
+    }
+    .tabla-lista-reservas thead tr th {
+        width: auto !important;
+    }
+    .tabla-lista-reservas tbody tr td.celda-acciones{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+}

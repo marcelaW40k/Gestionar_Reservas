@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS global -->
+    <link rel="stylesheet" href="main.css">
+
+    <!-- CSS del componente -->
+    <link rel="stylesheet" href="confirmacionServicio.css">
+
+    <title>Confirmación de Servicio</title>
+</head>
+<body>
+
+    <div class="confirmacion-wrapper">
+        <div class="confirmacion-container">
+
+            <div class="confirmacion-header">
+                <span class="paso-numero">04</span>
+                <h3 class="paso-titulo">CONFIRMACIÓN</h3>
+            </div>
+
+            <div class="separador"></div>
+
+            <div class="conf-two-columns">
+
+                <!-- Columna izquierda: etiquetas y valores apilados -->
+                <div class="col-izquierda">
+                    <!-- Servicio -->
+                    <div class="conf-item">
+                        <div class="conf-item-label">SERVICIO:</div>
+                        <div class="conf-item-value" id="confServicio">CORTE BASICO</div>
+                    </div>
+
+                    <!-- Profesional -->
+                    <div class="conf-item">
+                        <div class="conf-item-label">PROFESIONAL:</div>
+                        <div class="conf-item-value" id="confProfesional">ANDREA RIVERA</div>
+                    </div>
+
+                    <!-- Cita -->
+                    <div class="conf-item">
+                        <div class="conf-item-label">CITA:</div>
+                        <div class="conf-item-value" id="confFechaHora">ABR 25 // 2:00 PM</div>
+                    </div>
+                </div>
+
+                <!-- Columna derecha: total y botón -->
+                <div class="col-derecha">
+                    <div class="bloque-derecha">
+                        <div class="total-group">
+                            <span class="total-label">VALOR TOTAL</span>
+                            <span class="total-valor" id="confTotal">$50.000</span>
+                        </div>
+                        <button class="btn-confirmar" id="btnConfirmarReserva">
+                            CONFIRMAR RESERVA
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <script src="confirmacionServicio.js"></script>
+</body>
+</html>

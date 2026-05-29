@@ -1,0 +1,184 @@
+:root {
+    --color-primary: #522676;
+    --color-secondary: #AE8D3E;
+    --font-family-title: 'Playfair Display', serif;
+    --font-family-general: 'Montserrat', sans-serif;
+}
+
+/* Wrapper */
+.confirmacion-wrapper {
+    width: 100%;
+}
+
+/* Contenedor principal */
+.confirmacion-container {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Encabezado */
+.confirmacion-header {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.paso-numero {
+    font-family: var(--font-family-title);
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--color-secondary);
+    letter-spacing: 2px;
+}
+
+.paso-titulo {
+    font-family: var(--font-family-title);
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+/* Separador */
+.separador {
+    height: 1px;
+    background: rgba(0, 0, 0, 0.08);
+    margin: 15px 0;
+}
+
+/* Layout dos columnas */
+.conf-two-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Columna izquierda */
+.col-izquierda {
+    flex: 1;
+}
+
+/* Cada item de la columna izquierda */
+.conf-item {
+    margin-bottom: 20px;
+}
+
+.conf-item:last-child {
+    margin-bottom: 0;
+}
+
+.conf-item-label {
+    font-family: var(--font-family-general);
+    font-size: 0.7rem;
+    color: #888;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+}
+
+.conf-item-value {
+    font-family: var(--font-family-general);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+/* Columna derecha */
+.col-derecha {
+    min-width: 140px;
+    display: flex;
+    align-items: stretch;
+}
+
+/* Bloque derecho */
+.bloque-derecha {
+    background: transparent;
+    border-radius: 12px;
+    padding: 10px 0 10px 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    border-left: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Total */
+.total-group {
+    text-align: right;
+}
+
+.total-label {
+    font-family: var(--font-family-title);
+    font-size: 0.7rem;
+    color: #888;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.total-valor {
+    font-family: var(--font-family-title);
+    font-size: 1.3rem;
+    color: var(--color-secondary);
+}
+
+/* Botón */
+.btn-confirmar {
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-family: var(--font-family-general);
+    font-weight: 500;
+    font-size: 0.7rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-confirmar:hover {
+    background: var(--color-secondary);
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .confirmacion-wrapper {
+        padding: 10px;
+    }
+
+    .confirmacion-container {
+        padding: 15px;
+    }
+
+    .conf-two-columns {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .col-derecha {
+        min-width: auto;
+    }
+
+    .bloque-derecha {
+        border-left: none;
+        border-top: 1px solid rgba(0, 0, 0, 0.08);
+        padding: 12px 0 0 0;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .total-group {
+        text-align: left;
+    }
+
+    .btn-confirmar {
+        width: auto;
+    }
+}

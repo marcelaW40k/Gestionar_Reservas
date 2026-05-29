@@ -1,0 +1,55 @@
+
+.btn-guardar {
+    background: #522676;
+    color: white;
+    border: 2px solid transparent;
+    padding: 9px 25px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-guardar:hover {
+    background: white;
+    color: #AE8D3E;
+    border: 2px solid #AE8D3E;
+    transform: scale(1.05);
+}
+
+.btn-cerrar {
+    background: #ffffff;
+    color: #522676;
+    border: 2px solid #AE8D3E;
+    padding: 9px 25px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-cerrar:hover {
+    background: #7f7e80;
+    color: rgb(37, 37, 37);
+    border: 2px solid #AE8D3E;
+    transform: scale(1.05);
+}
+
+/* Boton agregar servicio*/
+.btn-agregar-servicio{
+    border-radius: 50%;
+    background-color: #4f0987;
+    border: #4f0987;
+}
+.btn-agregar-servicio:hover{
+    background-color: #8a32d1;
+}
+.text-truncate{
+  overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
+}
+
+

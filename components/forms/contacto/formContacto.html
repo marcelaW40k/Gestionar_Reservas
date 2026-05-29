@@ -1,0 +1,56 @@
+
+    <section class="form-container">
+
+        <h2 class="titulo-form">Contáctanos</h2>
+
+        <form 
+            id="formContacto" 
+            class="formulario"
+            action="https://formspree.io/f/mvzdkdjl"
+            method="POST"
+        >
+
+            <div class="input-group">
+                <input type="text" id="nombre" name="nombre" required placeholder="">
+                <label>Nombre</label>
+                <span class="error" id="errorNombre"></span>
+            </div>
+
+            <div class="input-group">
+                <input type="email" id="correo" name="correo" required placeholder="">
+                <label>Correo electrónico</label>
+                <span class="error" id="errorCorreo"></span>
+            </div>
+
+            <div class="input-group">
+                <input type="tel" id="telefono" name="telefono" placeholder="">
+                <label>Teléfono</label>
+                <span class="error" id="errorTelefono"></span>
+            </div>
+
+            <div class="input-group">
+                <textarea id="mensaje" name="mensaje" rows="3" required placeholder=""></textarea>
+                <label>Mensaje</label>
+                <span class="error" id="errorMensaje"></span>
+            </div>
+
+            <div id="mensajeEnvio" class="mensaje-exito" style="display: none;">
+                ¡Gracias! Tu mensaje ha sido enviado correctamente. Te responderemos pronto.
+            </div>
+            
+            <div class="d-flex ">
+                <button type="submit" class="btn-enviar">Enviar</button>
+            </div>
+
+        </form>
+        <div id="mensajeEnviando" class="mensaje-enviando" style="display: none;">
+            ⏳ Enviando mensaje... Espera un momento
+        </div>
+
+        <div id="mensajeEnvio" class="mensaje-exito" style="display: none;">
+            ✅ ¡Gracias! Tu mensaje ha sido enviado correctamente. Te responderemos pronto.
+        </div>
+
+    </section>
+
+    <script src="formContacto.js"></script>

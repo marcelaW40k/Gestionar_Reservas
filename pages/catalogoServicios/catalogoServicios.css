@@ -1,0 +1,172 @@
+.catalogo-main {
+    background-color: #f5f7fa;
+    padding: 60px 20px 80px;
+    min-height: 100vh;
+}
+
+.catalogo-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.catalogo-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.catalogo-header h1 {
+    font-family: var(--font-family-title, 'Playfair Display', serif);
+    font-size: 2.5rem;
+    color: var(--color-primary, #522676);
+    margin-bottom: 0.5rem;
+}
+
+.header-line {
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-secondary, #AE8D3E), var(--color-primary, #522676));
+    margin: 0.8rem auto 1rem;
+    border-radius: 3px;
+}
+
+.catalogo-header p {
+    font-family: var(--font-family-general, 'Montserrat', sans-serif);
+    font-size: 1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 3fr));
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.card-servicio {
+    background-color: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--color-secondary, #AE8D3E);  
+}
+
+.card-servicio:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(82, 38, 118, 0.15);
+    border-color: rgba(174, 141, 62, 0.3);
+}
+
+.card-imagen {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    object-position: center top;
+    border-bottom: 2px solid var(--color-secondary, #AE8D3E);
+}
+
+.card-contenido {
+    padding: 1.5rem;
+}
+
+.card-titulo {
+    font-family: var(--font-family-title, 'Playfair Display', serif);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-primary, #522676);
+    margin-bottom: 0.5rem;
+}
+
+.card-descripcion {
+    font-family: var(--font-family-general, 'Montserrat', sans-serif);
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.card-precio {
+    font-family: var(--font-family-title, 'Playfair Display', serif);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-secondary, #AE8D3E);
+    margin-bottom: 1rem;
+}
+
+.card-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    font-family: var(--font-family-general, 'Montserrat', sans-serif);
+}
+
+.badge-activo {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #a5d6a7;
+}
+
+.badge-inactivo {
+    background-color: #ffebee;
+    color: #c62828;
+    border: 1px solid #ef9a9a;
+}
+
+@media (max-width: 768px) {
+    .catalogo-main {
+        padding: 40px 15px 60px;
+    }
+
+    .catalogo-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .cards-grid {
+        gap: 1.5rem;
+    }
+
+    .card-contenido {
+        padding: 1.2rem;
+    }
+
+    .card-titulo {
+        font-size: 1.1rem;
+    }
+
+    .card-precio {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.btn-reservar {
+    display: block;
+    width: 100%;
+    background-color: var(--color-primary, #522676);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem;
+    font-family: var(--font-family-general, 'Montserrat', sans-serif);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 1rem;
+}
+
+.btn-reservar:hover {
+    background-color: var(--color-secondary, #AE8D3E);
+    transform: translateY(-2px);
+}

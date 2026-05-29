@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="/components/forms/creacionServicios/formCreacionServicios.css">
+
+<div class="col form-container">
+
+    <form id="formCreacionServicios" class="formulario" enctype="multipart/form-data">
+
+
+        <!-- action="https://formspree.io/f/mkokrkew" -->
+        <div class="input-group">
+            <input type="text" id="nombre" required placeholder="">
+            <label>Nombre </label>
+            <span class="error" id="errorNombre"></span>
+        </div>
+
+        <div class="input-group">
+            <input type="text" id="descripcion" name="descripcion" required placeholder="">
+            <label>Descripcion</label>
+            <span class="error" id="errorDescripcion"></span>
+        </div>
+
+        <div class="input-group ultimo_input_group">
+            <input type="text" id="precio" name="precio" required placeholder="">
+            <label>Precio</label>
+            <span class="error" id="errorPrecio"></span>
+        </div>
+        <div class="contenedor_subir_imagen">
+            <label>Subir Imagen</label>
+            <div class="caja_subir">
+                <input type="file" id="inputImagen" name="imagen" accept="image/*">
+                <img id="preview" src="" alt="Vista previa">
+                <span class="error" id="errorPrecio"></span>
+            </div>
+        </div>
+        <div class="status">
+            <span>Status:</span>
+            <input type="radio" id="activo" name="status" value="true" checked>
+            <label for="opcion1">Activo</label>
+        </div>
+        <input type="hidden" id="editIndex" value="">
+        <button type="submit" class="btn-enviar">Crear Servicio</button>
+
+    </form>
+</div>
+
+<script src="/assets/js/config.js"></script>
+<script type="module" src="formCreacionServicios.js"></script>

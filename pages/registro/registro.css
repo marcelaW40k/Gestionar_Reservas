@@ -1,0 +1,81 @@
+.container-main {
+    width: 95%;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    border: none;
+    border-radius: 16px;
+    background: var(--color-white);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    width: 100%;
+}
+
+.content-body {
+    padding: 0px;
+}
+
+.form-iframe {
+    width: 100%;
+    height: 950px;
+    border: none;
+    display: block;
+}
+
+/* Estilos para la columna izquierda */
+.info-registro {
+    padding: 40px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+}
+
+.info-registro h2 {
+    font-family: 'Playfair Display', serif;
+    color: #522676;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.info-registro > p {
+    color: #666;
+    margin-bottom: 40px;
+    font-size: 16px;
+}
+
+.beneficio {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 35px;
+    align-items: flex-start;
+}
+
+.beneficio i {
+    font-size: 32px;
+    color: #D69E2E;
+    min-width: 50px;
+}
+
+.beneficio h3 {
+    font-family: 'Playfair Display', serif;
+    color: #522676;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.beneficio p {
+    color: #666;
+    font-size: 14px;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .info-registro {
+        padding: 30px;
+    }
+    
+    .beneficio {
+        margin-bottom: 25px;
+    }
+}

@@ -1,0 +1,128 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #f5f5f5;
+}
+:root{
+    --color-secundario: #AE8D3E;
+}
+/* CONTENEDOR */
+.form-container {
+  margin: 5rem;
+}
+
+/* TITULO */
+.titulo-form {
+    font-family: 'Playfair Display', serif;
+    color: #522676;
+    margin-bottom: 30px;
+}
+
+/* INPUT GROUP */
+.input-group {
+    position: relative;
+    margin-bottom: 35px;
+}
+
+/* INPUTS - LÍNEAS DORADAS */
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #D69E2E;
+    outline: none;
+    background: transparent;
+    padding: 8px 0;
+    font-size: 16px;
+}
+
+/* EFECTO FOCUS */
+.input-group input:focus,
+.input-group textarea:focus {
+    border-bottom: 2px solid #522676;
+}
+
+/* LABEL */
+.input-group label {
+    position: absolute;
+    left: 0;
+    top: 8px;
+    color: #666;
+    font-size: 14px;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+/* LABEL ANIMADO */
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label,
+.input-group textarea:focus + label,
+.input-group textarea:not(:placeholder-shown) + label {
+    top: -12px;
+    font-size: 12px;
+    color: #522676;
+}
+
+/* ERROR */
+.error {
+    display: block;
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* BOTON */
+.btn-enviar {
+    width: 50%;
+    display: block;
+    font-size: 20px;
+    background: #522676;
+    color: white;
+    border: none;
+    padding: 10px 32px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 0 auto;
+}
+
+.btn-enviar:hover {
+    background: #AE8D3E;;
+    color: #fff;
+    border: 1px solid #886c2b;
+}
+
+/* Mensaje de éxito */
+.mensaje-exito {
+    background: #D69E2E;
+    color: #522676;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Mensaje de enviando */
+.mensaje-enviando {
+    background: #522676;
+    color: #D69E2E;
+    text-align: center;
+    padding: 12px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+@media(max-width:530px){
+    .btn-enviar{
+        width: auto;
+    }
+    .form-container{
+        width: 100%;
+        margin: 0;
+        padding: 0 10px;
+    }
+}

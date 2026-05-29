@@ -1,0 +1,46 @@
+:root {
+    --color-primary: #522676;
+    --color-secondary: #AE8D3E;
+    --font-family-title: 'Playfair Display', serif;
+    --font-family-general: 'Montserrat', sans-serif;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fdfcfc;
+    color: white;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+}
+
+h2 {
+    letter-spacing: 1px;
+}
+
+.container-custom {
+  width: 100%;
+  max-width: 100%; 
+  padding-left: 4rem;
+  padding-right: 4rem;
+}  
+
+.btn-principal {
+    background: #522676;
+    color: white;
+    border: 2px solid transparent;
+    padding: 12px 30px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-principal:hover {
+    background: white;
+    color: #AE8D3E;
+    border: 2px solid #AE8D3E;
+    transform: scale(1.05);
+}
