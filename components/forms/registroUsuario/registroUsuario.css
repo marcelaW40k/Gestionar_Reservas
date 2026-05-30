@@ -173,3 +173,42 @@ body {
     color: #AE8D3E;
     text-decoration: underline;
 }
+
+@media (max-width: 576px) {
+    html {
+        overflow: auto;
+    }
+
+    body {
+        padding: 20px 16px;
+    }
+
+    .form-container {
+        max-width: 100%;
+    }
+
+    .titulo-form {
+        font-size: 1.35rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .input-group {
+        margin-bottom: 1.75rem;
+    }
+
+    .requisitos-password {
+        font-size: 11px;
+        padding: 8px;
+    }
+
+    .btn-registro {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .mensaje-exito,
+    .mensaje-error {
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+}
