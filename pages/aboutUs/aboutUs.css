@@ -20,6 +20,10 @@ h6 {
     font-optical-sizing: auto;
     font-style: normal
 }
+.row {
+  justify-content: center;
+  gap: 12px;
+}
 
 .titulo-seccion {
     font-family: 'Playfair Display', serif;
