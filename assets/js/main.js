@@ -79,7 +79,6 @@ fetch('/components/navbar/navbar.html')
         enlaces.forEach(enlace => {
             // 2. Obtenemos el nombre del archivo del href del enlace
             let rutaEnlace = enlace.getAttribute('href').split("/").pop();
-            console.log("Comparando:", rutaEnlace, "con", rutaActual);
             
             if(rutaEnlace == rutaActual){
                 enlace.classList.add('active');
@@ -93,7 +92,7 @@ fetch('/components/navbar/navbar.html')
     .catch(err => console.error('Error cargando el navbar:', err));
 
 // Cargar banner de inicio
-fetch('components/bannerInicio/bannerInicio.html')
+fetch('/components/bannerInicio/bannerInicio.html')
     .then(res => res.text())
     .then(html => {
         document.getElementById('bannerInicio-placeholder').innerHTML = html;
@@ -138,7 +137,7 @@ fetch('components/review/review.html')
     .catch(err => console.error('Error cargando los comentarios:', err));
 
 // Cargar footer
-fetch('components/footer/footer.html')
+fetch('/components/footer/footer.html')
     .then(res => res.text())
     .then(html => {
         document.getElementById('footer-placeholder').innerHTML = html;
