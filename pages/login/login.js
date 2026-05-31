@@ -68,7 +68,8 @@ fetch('../../components/footer/footer.html')
     aviso.id = 'aviso-registro-exito';
     aviso.className = 'aviso-registro-exito';
     aviso.setAttribute('role', 'status');
-    aviso.textContent =
-        '¡Cuenta registrada! Ya puede iniciar sesión con su correo y contraseña.';
+    aviso.innerHTML =
+        '<span class="aviso-registro-exito-icon" aria-hidden="true"></span>' +
+        '<span class="aviso-registro-exito-texto">¡Cuenta <strong>registrada</strong>! Ya puede iniciar sesión con su correo y contraseña.</span>';
     columnaFormulario.insertBefore(aviso, columnaFormulario.firstChild);
 })();
